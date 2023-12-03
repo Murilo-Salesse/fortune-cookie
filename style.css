@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+
+  background: linear-gradient(45deg, #190361, #bb00ff);
+  animation: gradient 10s ease infinite;
+  background-size: 200% 200%;
+
+  display: grid;
+  place-items: center;
+  height: 100vh;
+
+  font-family: "DM Sans", sans-serif;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.8);
+
+  width: min(40rem, 90%);
+  padding: 4.8rem 6.4rem 6.4rem;
+}
+
+.hide {
+  display: none;
+}
+
+/* Scrren One */
+main h2 {
+  color: #34355b;
+  text-align: center;
+
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+main p {
+  color: #34355b;
+  text-align: center;
+
+  font-family: DM Sans;
+  font-size: 1.5rem;
+  font-weight: 400;
+
+  margin-bottom: 2.4rem;
+}
+
+#luckyPhrase {
+  animation: positionPhrase 2s ease-out;
+}
+
+@keyframes positionPhrase {
+  from {
+    transform: translateY(100%) scale(0);
+  }
+  to {
+    transform: translateY(0) scale(1);
+  }
+}
+
+main img {
+  transition: all 0.3s ease-in-out;
+}
+
+main img:hover {
+  cursor: pointer;
+  animation: tremor 0.1s ease-in-out infinite;
+}
+
+@keyframes tremor {
+  0% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(-4deg);
+  }
+}
+
+/* screenTwo */
+.screenTwo p {
+  font-family: "Dancing Script", cursive;
+  font-size: 2.4rem;
+
+  background: #e4edf1;
+
+  box-shadow: 2px 2px 2px 0px rgba(85, 85, 85, 0.5);
+
+  padding: 1rem;
+
+  margin-top: 2rem;
+}
+
+.screenTwo button {
+  border-radius: 4px;
+  background: #ff9500;
+
+  color: #fff;
+  text-align: center;
+
+  font-size: 1.5rem;
+  font-weight: 700;
+
+  width: 17.4rem;
+  margin-left: 6rem;
+  padding: 1.6rem;
+  border: none;
+
+  cursor: pointer;
+
+  margin-top: 3rem;
+}
+
+.screenTwo img:hover {
+  animation: none;
+}
